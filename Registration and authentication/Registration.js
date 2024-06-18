@@ -9,7 +9,7 @@ const Registration = () => {
 
     const registerCompany = async () => {
         try {
-            const response = await axios.post('http://20.244.56.144/test/register', {
+            const response = await axios.post('http://loalhost:4000/register', {
                 companyName: "goMart",
                 ownerName: "Geetha Priya",
                 rollNo: "1",
@@ -30,7 +30,7 @@ const Registration = () => {
                 return;
             }
             const { clientID, clientSecret } = registrationData;
-            const response = await axios.post('http://20.244.56.144/test/auth', {
+            const response = await axios.post('http://localhost:4000/auth', {
                 clientID,
                 clientSecret
             });
